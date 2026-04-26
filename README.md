@@ -114,10 +114,11 @@ open_to   : Internships · Research · Full-time Roles
 
 ---
 
-### 🔝 Top Contributed Repos
+### 🔝 Most Used Languages & Repos
 
 <div align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=suryatenz&limit=5&theme=dark&combine_all_yearly_contributions=true"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=suryatenz&theme=github_dark&exclude=html" height="160"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=suryatenz&theme=github_dark&exclude=html" height="160"/>
 </div>
 
 ---
