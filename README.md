@@ -117,16 +117,8 @@ open_to   : Internships · Research · Full-time Roles
 ### 🔝 Most Used Languages & Repos
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=suryatenz&theme=github_dark&exclude=html" height="160"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=suryatenz&theme=github_dark&exclude=html" height="160"/>
-</div>
-
----
-
-<div align="center">
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=suryatenz&icon=0&color=6"/>
-  </a>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=suryatenz&theme=radical&exclude=html" height="160"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=suryatenz&theme=radical&exclude=html" height="160"/>
 </div>
 
 <div align="center">
