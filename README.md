@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:cc0000&height=220&section=header&text=Surya%20Prajyesh%20Eatha&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Scientist%20%7C%20Ai%20Automation Engineer%20%7C%20Full%20Stack%20Developer&descAlignY=58&descAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:cc0000&height=220&section=header&text=Surya%20Prajyesh%20Eatha&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Scientist%20%7C%20AI%20Automation%20Engineer%20%7C%20Full%20Stack%20Engineer&descAlignY=58&descAlign=50" />
 </div>
 
 <div align="center">
@@ -15,7 +15,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=CC0000&center=true&vCenter=true&width=650&lines=MS+Data+Science+%40+University+of+Houston;Machine+Learning+%26+Deep+Learning+Engineer;Full+Stack+Dev+%7C+React+%2B+FastAPI+%2B+MERN;Building+AI-Powered+Real-World+Solutions" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=CC0000&center=true&vCenter=true&width=650&lines=MS+Data+Science+%40+University+of+Houston;Machine+Learning+%26+Deep+Learning+Engineer;AI+Automation+%7C+LLM-Powered+Workflows;Full+Stack+Engineer+%7C+React+%2B+FastAPI+%2B+MERN;Building+AI-Powered+Real-World+Solutions" />
 </div>
 
 ---
@@ -28,7 +28,7 @@ location  : Houston, TX
 education : MS Engineering Data Science @ University of Houston (GPA 3.44)
 research  : Published — Deep Learning for Seismic Salt Segmentation (UNet)
 latest    : Pit-Wall — F1 AI race predictor & analytics cockpit
-interests : Machine Learning · Full Stack · Data Visualization · Automation
+interests : Machine Learning · AI Automation · Full Stack · Data Visualization
 open_to   : Internships · Research · Full-time Roles
 ```
 
@@ -71,8 +71,19 @@ open_to   : Internships · Research · Full-time Roles
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
+### ⚙️ AI Automation & Tools
+![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-0078d7?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+
 ### ☁️ Cloud & DevOps
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
@@ -91,7 +102,7 @@ open_to   : Internships · Research · Full-time Roles
 | Project | Description | Stack |
 |---------|-------------|-------|
 | 🏎️ **[Pit-Wall](https://github.com/suryatenz/Pit-Wall)** | F1 analytics cockpit — historical race data, championship simulator & AI race predictor | React · FastAPI · scikit-learn · Recharts · Tailwind |
-| 📧 **[OwlPost](https://github.com/suryatenz/OwlPost)** | Bulk email automation tool for scheduling university faculty outreach at scale | Python · REST APIs · Scheduling |
+| 📧 **[OwlPost](https://github.com/suryatenz/OwlPost)** | Bulk email automation tool for scheduling university faculty outreach at scale | Python · Selenium · SMTP · Scheduling |
 | 🧠 **[Salt Segmentation](https://github.com/suryatenz/Salt_segmentation)** | Deep learning model for seismic salt body detection — results published as a research paper | UNet · TensorFlow · Python |
 | 🏛️ **[College Funding Platform](https://github.com/suryatenz/GovtCollegeFundingProject)** | Govt platform to support public funding decisions for Andhra Pradesh junior colleges | MERN · Docker · Redux |
 
