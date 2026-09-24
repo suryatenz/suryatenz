@@ -1,137 +1,79 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:cc0000&height=220&section=header&text=Surya%20Prajyesh%20Eatha&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Scientist%20%7C%20AI%20Automation%20Engineer%20%7C%20Full%20Stack%20Engineer&descAlignY=58&descAlign=50" />
-</div>
+<img src="assets/paper-title.svg" width="100%" alt="Surya Prajyesh Eatha. On reading the data, making the call, and automating the rest. MS, Engineering Data Science and AI, University of Houston. Abstract: I build machine-learning and LLM systems that turn messy data into decisions, including a pipeline that screens 10,000+ job postings a day, a Formula 1 race predictor built on 74 years of results, and a published UNet model for seismic salt segmentation. Looking for data science, ML and AI automation roles."/>
 
-<div align="center">
-  <a href="https://www.linkedin.com/in/surya-prajyesh-3053ab253/">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:sprajyesh@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=suryatenz&style=for-the-badge&color=cc0000&label=PROFILE+VIEWS"/>
-</div>
+<p align="center">
+<a href="mailto:sprajyesh@gmail.com">sprajyesh@gmail.com</a> &nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/surya-prajyesh-3053ab253/">LinkedIn</a> &nbsp;·&nbsp;
+Houston, Texas &nbsp;·&nbsp;
+open to internships and full-time roles, remote or on-site
+</p>
 
-<br/>
+## 1 &nbsp; Introduction
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=CC0000&center=true&vCenter=true&width=650&lines=MS+Data+Science+%40+University+of+Houston;Machine+Learning+%26+Deep+Learning+Engineer;AI+Automation+%7C+LLM-Powered+Workflows;Full+Stack+Engineer+%7C+React+%2B+FastAPI+%2B+MERN;Building+AI-Powered+Real-World+Solutions" />
-</div>
+I like the moment a spreadsheet becomes a system. Most of what I build follows one pattern: gather the data, apply rules a person can read, let a model handle the judgement calls, and leave the final say to a human. The three projects below are the clearest examples. Each one has a figure, and the numbers come from the project itself.
 
----
+## 2 &nbsp; Selected work
 
-## 🧠 About Me
+### 2.1 &nbsp; Job Alerts: screening 10,000+ postings a day
 
-```yaml
-name      : Surya Prajyesh Eatha
-location  : Houston, TX
-education : MS Engineering Data Science @ University of Houston (GPA 3.44)
-research  : Published — Deep Learning for Seismic Salt Segmentation (UNet)
-latest    : Pit-Wall — F1 AI race predictor & analytics cockpit
-interests : Machine Learning · AI Automation · Full Stack · Data Visualization
-open_to   : Internships · Research · Full-time Roles
-```
+<a href="https://github.com/suryatenz/job-alerts"><img src="assets/fig-1-pipeline.svg" width="100%" alt="Figure 1. Job Alerts pipeline: five posting sources, rule filters, LLM fit ranking with the Claude API, drafted answers with a learning memory profile, and human review."/></a>
 
----
+**Figure 1.** The Job Alerts pipeline. Postings from five sources go through cheap, readable rule filters first (experience level, visa sponsorship, degree). Only the survivors are ranked by an LLM. Drafted answers draw on a memory profile that improves every time I correct one.[^1]
 
-## 💻 Tech Stack
+<sub>Python · Claude API · Flask · Playwright · Task Scheduler &nbsp;—&nbsp; [repository →](https://github.com/suryatenz/job-alerts)</sub>
 
-### 🖥️ Languages
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-%2307405e.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+### 2.2 &nbsp; Pit Wall: 74 years of Formula 1 and a race predictor
 
-### ⚛️ Frontend
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![Framer](https://img.shields.io/badge/Framer%20Motion-black?style=for-the-badge&logo=framer&logoColor=0055FF)
-![Recharts](https://img.shields.io/badge/Recharts-22b5bf?style=for-the-badge&logo=chartdotjs&logoColor=white)
+<a href="https://github.com/suryatenz/Pit-Wall"><img src="assets/fig-2-pole.svg" width="100%" alt="Figure 2. Share of Formula 1 races won from pole position per season, 1950 to 2024. Across 1,125 races the pole-sitter won 42.6 percent of the time."/></a>
 
-### 🔧 Backend & Databases
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+**Figure 2.** How often the pole-sitter goes on to win, season by season, computed from the dataset Pit Wall is built on. Across 1,125 races the answer is 42.6%, and 21.5% of wins came from outside the top three on the grid. Starting position matters but settles far less than you would expect, which is what makes prediction interesting. Pit Wall covers 861 drivers with a Random Forest race predictor that gives confidence scores, a championship what-if simulator and head-to-head driver comparison.
 
-### 🤖 ML / AI
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+<sub>FastAPI · scikit-learn · pandas · React · Recharts &nbsp;—&nbsp; [repository →](https://github.com/suryatenz/Pit-Wall)</sub>
 
-### ⚙️ AI Automation & Tools
-![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-0078d7?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+### 2.3 &nbsp; Seismic salt segmentation (published)
 
-### ☁️ Cloud & DevOps
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
+<a href="https://github.com/suryatenz/Salt_segmentation"><img src="assets/fig-3-unet.svg" width="100%" alt="Figure 3. Schematic of a UNet encoder-decoder turning a seismic image into a predicted salt mask."/></a>
 
-### 📊 Data & BI Tools
-![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
-![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+**Figure 3.** Schematic of the UNet approach from my paper [1]: an encoder compresses the seismic image, a decoder rebuilds it at full resolution, and skip connections carry fine detail across so the salt boundary stays sharp. The panels are illustrative, not model output.
 
----
+<sub>Python · TensorFlow · UNet &nbsp;—&nbsp; [repository →](https://github.com/suryatenz/Salt_segmentation)</sub>
 
-## 🚀 Featured Projects
+### 2.4 &nbsp; Also
 
-| Project | Description | Stack |
-|---------|-------------|-------|
-| 🏎️ **[Pit-Wall](https://github.com/suryatenz/Pit-Wall)** | F1 analytics cockpit — historical race data, championship simulator & AI race predictor | React · FastAPI · scikit-learn · Recharts · Tailwind |
-| 📧 **[OwlPost](https://github.com/suryatenz/OwlPost)** | Bulk email automation tool for scheduling university faculty outreach at scale | Python · Selenium · SMTP · Scheduling |
-| 🧠 **[Salt Segmentation](https://github.com/suryatenz/Salt_segmentation)** | Deep learning model for seismic salt body detection — results published as a research paper | UNet · TensorFlow · Python |
-| 🏛️ **[College Funding Platform](https://github.com/suryatenz/GovtCollegeFundingProject)** | Govt platform to support public funding decisions for Andhra Pradesh junior colleges | MERN · Docker · Redux |
+**[OwlPost](https://github.com/suryatenz/OwlPost)**: schedules and sends 70–100 personalised outreach emails a day over Gmail SMTP, recycles the contact list when a run finishes, and detects replies over IMAP with multi-method matching.
 
----
+## 3 &nbsp; Experience
 
-## 📊 GitHub Stats
+<p><b>Table 1.</b> Internships, most recent first.</p>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=suryatenz&theme=dark&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=cc0000&icon_color=cc0000" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=suryatenz&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact&bg_color=0d1117&title_color=cc0000" height="170"/>
-</div>
+| Year | Role | Organisation | What I did |
+|:--|:--|:--|:--|
+| 2026 | AI Automation & Data Analytics Intern | Diversified Medical Practices, Houston | Replaced paper-based clinic admin with Python automation for service requests and scheduling |
+| 2024 | Data Visualization Developer Intern | UnBoxing Community, Bangalore | React portal over REST APIs and a Java backend that turned raw data into dashboards; AWS and Git deployments |
+| 2023 | Web Development Intern | EduMoon, remote | Production pages in HTML, CSS and JavaScript with the frontend team |
 
-<div align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=suryatenz&theme=dark&hide_border=true&ring=cc0000&fire=cc0000&currStreakLabel=cc0000"/>
-</div>
+## 4 &nbsp; Methods and materials
 
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=suryatenz&bg_color=0d1117&color=cc0000&line=cc0000&point=ffffff&area=true&area_color=cc000033&hide_border=true" width="95%"/>
-</div>
+<p><b>Table 2.</b> Tools I have shipped work with.</p>
 
----
+| | |
+|:--|:--|
+| *Modelling* | Python, SQL, pandas, NumPy, scikit-learn, TensorFlow |
+| *LLM systems* | Claude API, prompt pipelines, memory profiles |
+| *Serving* | FastAPI, Flask, Docker, AWS S3 |
+| *Interfaces* | React, Redux, Vite, Tailwind, Framer Motion, Recharts |
+| *Automation* | Playwright, Gmail SMTP / IMAP, Windows Task Scheduler |
+| *Reporting* | Power BI, Tableau, Matplotlib, Jupyter |
 
-### 🔝 Most Used Languages & Repos
+## 5 &nbsp; Activity
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=suryatenz&theme=radical&exclude=html" height="160"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=suryatenz&theme=radical&exclude=html" height="160"/>
-</div>
+<img src="assets/fig-4-activity.svg" width="100%" alt="Figure 4. Weekly public GitHub contributions over the last 12 months."/>
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:cc0000,100:000000&height=120&section=footer"/>
-</div>
+**Figure 4.** Weekly public contributions over the last year. A GitHub Action redraws this figure every day.
+
+## References
+
+1. *Deep Learning for Seismic Salt Segmentation to Aid Hydrocarbon Exploration Using UNet.* Published June 2025.
+2. MS, Engineering Data Science & AI, University of Houston, 2025 to present.
+3. *Python for Data Science, AI & Development.* IBM, Coursera, 2023.
+
+[^1]: Playwright pre-fills real application forms but always stops before submitting, and never touches demographic fields. A person presses the button.
