@@ -1,7 +1,8 @@
 """Draw assets/fig-4-activity.svg from the public GitHub contribution calendar.
 
-Weekly contribution totals, set as a figure in the same paper style as the rest of
-the README. No token needed: github.com/users/<user>/contributions is public.
+Weekly contribution totals as a bar chart, in the same palette and type as the rest
+of the README (see brand.py). No token needed: github.com/users/<user>/contributions
+is public. A GitHub Action runs this daily.
 """
 import re
 import sys
@@ -10,10 +11,12 @@ from collections import OrderedDict
 from datetime import date
 from pathlib import Path
 
+from brand import INK, INK2, LINE, SURFACE, TONES, font_css
+
 USER = "suryatenz"
 OUT = Path(__file__).resolve().parent.parent / "assets" / "fig-4-activity.svg"
-W, H = 1200, 400
-L, R, T, B = 90, 1150, 60, 320
+W, H = 1200, 500
+L, R, T, B = 100, 1140, 176, 412
 
 
 def fetch_days():
@@ -61,49 +64,53 @@ def nice_max(v):
     return v, v // 4
 
 
+def text(x, y, s, face="body", size=15, fill=INK2, anchor="start", extra=""):
+    return f'<text x="{x}" y="{y}" class="f-{face}" font-size="{size}" fill="{fill}" text-anchor="{anchor}" {extra}>{s}</text>'
+
+
 def render(s):
+    base, tint, dark = TONES["butter"]
+    cobalt = TONES["cobalt"][0]
     wk = s["weeks"]
     top, step = nice_max(max(n for _, n in wk) or 1)
     slot = (R - L) / len(wk)
     y = lambda v: B - v * (B - T) / top
     out = []
     for v in range(0, top + 1, step):
-        out.append(f'<line class="grid" x1="{L}" y1="{y(v):.1f}" x2="{R}" y2="{y(v):.1f}"/>')
-        out.append(f'<text x="{L-12}" y="{y(v)+5:.1f}" class="serif mut" font-size="14" text-anchor="end">{v}</text>')
+        out.append(f'<line x1="{L}" y1="{y(v):.1f}" x2="{R}" y2="{y(v):.1f}" stroke="{LINE}" stroke-width="1"/>')
+        out.append(text(L - 14, f"{y(v)+5:.1f}", v, anchor="end", size=14))
     seen = set()
     for i, (d, n) in enumerate(wk):
         x = L + i * slot
         if n:
             out.append(
-                f'<rect class="bar" style="animation-delay:{i*0.012:.2f}s" x="{x+1.5:.1f}" y="{y(n):.1f}" width="{slot-3:.1f}" height="{B-y(n):.1f}"/>'
+                f'<rect class="bar" style="animation-delay:{i*0.012:.2f}s" x="{x+2:.1f}" y="{y(n):.1f}" '
+                f'width="{slot-4:.1f}" height="{B-y(n):.1f}" rx="3" fill="{cobalt}"/>'
             )
-        month = d[:7]
-        if month not in seen and date.fromisoformat(d).day <= 7:
-            seen.add(month)
-            out.append(f'<line class="sk" x1="{x:.1f}" y1="{B}" x2="{x:.1f}" y2="{B+6}"/>')
-            out.append(
-                f'<text x="{x:.1f}" y="{B+26}" class="serif mut" font-size="13" text-anchor="middle">{date.fromisoformat(d).strftime("%b")}</text>'
-            )
-    today = date.today().strftime("%d %B %Y").lstrip("0")
+        day = date.fromisoformat(d)
+        if d[:7] not in seen and day.day <= 7:
+            seen.add(d[:7])
+            out.append(text(f"{x:.1f}", B + 28, day.strftime("%b"), anchor="middle", size=14))
     summary = f"{s['total']:,} contributions · {s['active']} active days · longest run {s['longest']} days"
+    today = date.today().strftime("%d %B %Y").lstrip("0")
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
   <title id="t">Figure 4. Weekly public GitHub contributions for {USER} over the last 12 months: {summary}.</title>
   <style>
-    .paper {{ fill:#f6f1e7; }} .edge {{ fill:none; stroke:#e2d9c6; stroke-width:1; }}
-    .serif {{ font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif; }}
-    .mut {{ fill:#6e675b; }} .nav {{ fill:#2d4a73; }}
-    .grid {{ stroke:#e4dccb; stroke-width:1; }} .sk {{ stroke:#1c1b19; stroke-width:1.2; fill:none; }}
-    .bar {{ fill:#8f2d22; transform-box:fill-box; transform-origin:bottom; transform:scaleY(0); animation: up .7s ease-out forwards; }}
+    {font_css("display", "body", "body-m")}
+    .bar {{ transform-box:fill-box; transform-origin:bottom; transform:scaleY(0); animation: up .8s cubic-bezier(.2,.7,.2,1) forwards; }}
     @keyframes up {{ to {{ transform:scaleY(1); }} }}
     @media (prefers-reduced-motion: reduce) {{ .bar {{ animation:none; transform:none; }} }}
   </style>
-  <rect class="paper" width="{W}" height="{H}" rx="6"/><rect class="edge" x=".5" y=".5" width="{W-1}" height="{H-1}" rx="6"/>
-  <text x="40" y="34" class="serif mut" font-size="15" font-style="italic">(d) Weekly public contributions, last 12 months</text>
-  <text x="{R}" y="34" class="serif nav" font-size="14" font-style="italic" text-anchor="end">{summary}</text>
+  <rect width="{W}" height="{H}" rx="28" fill="{tint}"/>
+  <circle cx="46" cy="44" r="5" fill="{base}"/>
+  {text(60, 49, "FIGURE 4 · ACTIVITY", "display", 13, dark, extra='letter-spacing="1.6"')}
+  {text(40, 98, "Last 12 months", "display", 44, INK, extra='letter-spacing="-1.6"')}
+  {text(W-40, 98, summary, "body", 17, dark, "end")}
+  <rect x="24" y="128" width="{W-48}" height="{H-152}" rx="20" fill="{SURFACE}"/>
+  {text(L, 162, "weekly public contributions", "body-m", 15, INK2)}
+  {text(R, 162, f"redrawn daily · updated {today}", "body", 14, INK2, "end")}
   {''.join(out)}
-  <line class="sk" x1="{L}" y1="{B}" x2="{R}" y2="{B}"/><line class="sk" x1="{L}" y1="{T}" x2="{L}" y2="{B}"/>
-  <text x="{W//2}" y="{H-18}" class="serif mut" font-size="13" font-style="italic" text-anchor="middle">Source: public GitHub contribution calendar · redrawn daily · last updated {today}</text>
 </svg>
 """
 
